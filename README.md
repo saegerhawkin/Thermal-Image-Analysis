@@ -1,4 +1,5 @@
 # Thermal Image Analysis #
+**<a href=https://nbviewer.jupyter.org/github/saegerhawkin/Thermal-Image-Analysis/blob/master/thermal_imaging.ipynb>Check out the Jupyter Notebook Here</a>** <br>
 I used this project to practice with some image analysis. I have not worked with images for a couple of years so I decided to revisit packages Python uses for image analysis. I chose to use scikit-image based on the documentation and compatability with Anaconda. 
 
 As well as keeping up on experience, I also was practicing as I was going to need to identifiy objects in thermal images for my summer internship at Johnsonville. That is why I chose to use this thermal image of a pig:
