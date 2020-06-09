@@ -27,11 +27,11 @@ Now this worked pretty well in finding some of the edges but unfortunately I was
 ### Watershed ###
 This method involves first creating an elevation map out of the image. This is what that looks like:<br>
 ![](images/elevationmap.png) <br>
-Then you need to find markers of grayscale value to input into the watershed function from a histogram.<br> 
+Then you need to find markers of grayscale value to input into the watershed function from a histogram. I my code I used 0.10 because that is there the peak started and I used 0.40 as the endpoint because that is where it starts to level out.<br> 
 ![](images/histogram.png)<br>
 And finally you can create a watershed.<br>
 ![](images/watershed.png)<br>
 
 ### Comparison of Methods ###
-Out of all the methods it appears like the watershed method correctly selected the majority of the pig in the image. <br>
+Below you will see me highlighting the parts of the mask green in the original image. Out of all the methods it appears like the watershed method correctly selected the majority of the pig in the image. Both thresholding methods didn't get all of the outline of the pig and the watershed did. <br>
 ![](images/endcomparison.png)
