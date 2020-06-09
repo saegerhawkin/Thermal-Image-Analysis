@@ -5,9 +5,9 @@ As well as keeping up on experience, I also was practicing as I was going to nee
 ![](images/original.png)
 
 
-After researching online I chose to use a few different methods. Here are the links to articles I found on these.
-**Thresholding:** https://scikit-image.org/docs/stable/auto_examples/applications/plot_thresholding.html
-**Canny Edge Detection:** https://datacarpentry.org/image-processing/08-edge-detection/
+After researching online I chose to use a few different methods. Here are the links to articles I found on these. <br>
+**Thresholding:** https://scikit-image.org/docs/stable/auto_examples/applications/plot_thresholding.html <br>
+**Canny Edge Detection:** https://datacarpentry.org/image-processing/08-edge-detection/ <br>
 **Various Methods Including Watershed Transform:** https://scikit-image.org/docs/dev/user_guide/tutorial_segmentation.html
 
 Here are the results of each method:
@@ -20,9 +20,18 @@ After seeing them all I selected the two best methods and compared those.
 ![](images/threshold2.png)
 
 ### Canny Edge Detection ###
-![](images/threshold.png)
+Canny Edge detection involves applying a gaussian blur to the image to make it noisy. It then uses a formula to identify where the edges of the image are. There are different parameters to play with, one of the important ones being sigma which I changed as you can see in the image below.<br>
+![](images/canny.png) <br>
+Now this worked pretty well in finding some of the edges but unfortunately I was not able to fill in the inside of the edges since they are not all connected. This means I wasn't able to make a mask to identify the image.<br>
 
 ### Watershed ###
-
+This method involves first creating an elevation map out of the image. This is what that looks like:<br>
+![](images/elevationmap.png) <br>
+Then you need to find markers of grayscale value to input into the watershed function from a histogram.<br> 
+![](images/histogram.png)<br>
+And finally you can create a watershed.<br>
+![](images/watershed.png)<br>
 
 ### Comparison of Methods ###
+Out of all the methods it appears like the watershed method correctly selected the majority of the pig in the image. <br>
+![](images/endcomparison.png)
